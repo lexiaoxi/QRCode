@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>QRCode demo</title>
+    <script src="QRCode.js"></script>
+</head>
+
+<body>
+<div style=" position: absolute;left:50%;transform: translate(-50%, 0);">
+	<div id="qrcode" style="margin:20px 0;"></div>
+	<textarea id="getval" style="width: 400px; height:300px;"></textarea>
+	<button id="send" style="height:38px;">生成二维码</button>
+	<button id="clear" style="height:38px;">清空历史记录</button>
+</div>
+<script>
+//example-1
+var oQRCode = new QRCode("qrcode","send","clear","getval",{
+	width : 200,
+	height : 200
+});
+
+//example-2
+/*
+var oQRCode = new QRCode("qrcode", {
+	text : "http://naver.com",
+	width : 128,
+	height : 128
+});
+//example-3
+var oQRCode = new QRCode("qrcode", "http://jindo.dev.naver.com/collie");
+//example-4
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text : "https://www.baidu.com",
+    width: 96, //设置宽高
+    height: 96
+});
+qrcode.makeCode("https://www.baidu.com");
+//example-5(没有自行设置链接则转换当前url的二维码)
+var oQRCode = new QRCode("qrcode", {
+	width : 128,
+	height : 128
+});
+*/
+</script>
+</body>
+</html>
